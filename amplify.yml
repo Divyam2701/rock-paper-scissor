@@ -9,11 +9,10 @@ frontend:
       commands:
         - pnpm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: out  # <-- This should match where `next export` puts the static site
     files:
       - '**/*'
   cache:
     paths:
-      - .next/cache/**/*
       - node_modules/**/*
       - ~/.pnpm-store/**/*
