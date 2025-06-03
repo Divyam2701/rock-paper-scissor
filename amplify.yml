@@ -8,8 +8,9 @@ frontend:
     build:
       commands:
         - pnpm run build
+        - pnpm exec next export
   artifacts:
-    baseDirectory: .next
+    baseDirectory: out
     files:
       - '**/*'
   cache:
