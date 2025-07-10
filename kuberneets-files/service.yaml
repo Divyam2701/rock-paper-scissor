@@ -10,4 +10,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 3000 # Change if your app uses a different port
-      nodePort: 30080 # Optional: specify NodePort or let Kubernetes assign
