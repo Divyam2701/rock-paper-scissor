@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rock-paper-scissor-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rock-paper-scissor
+  template:
+    metadata:
+      labels:
+        app: rock-paper-scissor
+    spec:
+      containers:
+      - name: rock-paper-scissor
+        image: your-dockerhub-username/rock-paper-scissor:latest # Replace with your image name
+        ports:
+        - containerPort: 3000 # Change if your app uses a different port
