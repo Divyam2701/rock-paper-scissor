@@ -223,7 +223,7 @@ export default function RockPaperScissors() {
       {gameHistory.length > 0 && (
         <Card className="max-w-md mx-auto mt-6">
           <CardHeader>
-            <CardTitle className="text-lg">Game History and check that how many times you have won in the game</CardTitle>
+            <CardTitle className="text-lg">Game History and check that how many times you have won in the game against the computer</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-2">
