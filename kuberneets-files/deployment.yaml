@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: rock-paper-scissor-deployment
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: rock-paper-scissor
