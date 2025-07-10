@@ -1,3 +1,5 @@
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,7 +11,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export', // 🔥 This enables static HTML export
-}
+  output: 'export',
 
-export default nextConfig
+  // 👇 Add this to properly resolve @/ alias for Webpack (needed in Docker builds)
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve('./');
+    return config;
+  },
+};
+
+export default nextConfig;
