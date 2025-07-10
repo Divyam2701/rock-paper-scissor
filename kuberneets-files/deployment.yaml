@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rock-paper-scissor
-        image: divyam2701/rock-paper-scissor:latest # Replace with your image name
+        image: divyam2701/rock-paper-scissor:7990ddd18db253432995a8917462fc3c9a26d7a0
         imagePullPolicy: Always
         ports:
         - containerPort: 3000 # Change if your app uses a different port
